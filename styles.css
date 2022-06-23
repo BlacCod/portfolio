@@ -135,7 +135,7 @@ h2 {
 h2::after, h2::before {
     content: "";
     position: absolute;
-    top: 1rem;
+    top: 1.5rem;
     width: 15rem;
     height: 1px;
     background-color: white;
