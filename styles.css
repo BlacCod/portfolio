@@ -1,49 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
 }
 :root {
     --btn-color: hsl(217, 91%, 59%);
     --navy: rgb(10, 24, 46);
     --navy-rgb: 10, 24, 46;
-
+    --lightgray: #ccd6f6;
+    --middle-slate: hsl(225, 20%, 50%);
+    --light: #a8b2d1;
+    --header-height: 10vh;
+    --space-between-sections: 100px;
 }
 
 html {
     background-color: var(--navy);
-    color: white;
+    /* this is for smooth scrolling effect */
+    scroll-behavior: smooth;
 }
+
 * {
     font-family: Roboto, sans-serif;
 }
+
 ul {
     list-style-type: none;
     display: flex;
 }
+.logo, .logo * {
+    font-weight: bold;
+    font-family: "Kalam", cursive;
+    font-size: 30px;
+}
+section {
+    margin-bottom: var(--space-between-sections);
+    position: relative;
+}
 
-ul > * {
-    margin: 0 10px;
-    color: white;
-}
-ul a {
-    text-decoration: none;
+/* This is to offset the fixed header height when jumping using anchor tags */
+section::before {
+    content: "";
+    display: block;
+    height: var(--header-height);
+    margin-top: calc(var(--header-height) * -1);
+    visibility: hidden;
+    pointer-events: none;
 }
 
-.social {
-    position: fixed;
-    bottom: 0;
-}
-.social > ul {
+
+#hero {
+    background: var(--navy);
+    height: calc(100vh - var(--space-between-sections));
+
     display: flex;
     flex-direction: column;
-    z-index: 10;
-}
-
-
-.hero {
-    /* background-color: #1f2937; */
-    background: var(--navy);
+    justify-content: center;
+    padding-left: 100px;
 }
 
 header {
@@ -55,79 +72,156 @@ header {
     position: sticky;
     top: 0;
     padding: 40px;
-    height: 10vh;
+    height: var(--header-height);
     z-index: 100;
 
     background-color: rgba(var(--navy-rgb), 0.85);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     
 }
 
 header * {
-    color: white;
-    gap: 10px;
+    gap: 20px;
 }
-
-.hero {
-    height: 100vh;
+.active {
+    padding: 10px 10px;
+    border: solid 1px var(--btn-color);
+    border-radius: 0.25rem;
+    background-color: var(--btn-color);
+    color: white
 }
-
 #skills {
     text-align: center;
 }
 
 h2 {
+    font-size: 2rem;
     text-align: center;
     position: relative;
+    margin-bottom: 40px;
 }
 
 h2::after, h2::before {
     content: "";
     position: absolute;
-    top: 0.9rem;
-    width: 10rem;
+    top: 1rem;
+    width: 15rem;
     height: 1px;
     background-color: white;
 }
 
 h2::before {
-    right: calc(50vw + 4rem);
+    right: calc(50vw + 5rem);
 }
 h2::after {
-    left: calc(50vw + 4rem);
+    left: calc(50vw + 5rem);
 }
+
+
+.main-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1);
+    row-gap: 20px;
+    justify-items: center;
+
+    transform: translateY(25%);
+    margin: 0 100px 100px;
+}
+.skill-icon {
+    width: 5rem;
+    height: 100%;
+}
+
+.secondary-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px 30px;
+
+    margin: 20px;
+}
+
+
 .project {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 5vw;
+    margin: 30px 100px 30px 200px;
 }
 
 .project-right {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.project-desc {
+    color: var(--middle-slate);
+}
+
+h3 {
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+}
+
+.project-title {
+    color: var(--lightgray)
+}
+.project-title:hover, a:hover:not(.active) {
+    color: var(--btn-color);
 }
 
 .tech-list {
-    color: grey;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5px 30px;
 }
+
+
 
 .btn {
     display: inline-block;
     text-decoration: none;
-    padding: 5px 10px;
-    margin: 5px;
-    /* background: var(--btn-color); */
+    padding: 10px 10px;
+    margin-right: 10px;
     border: solid 1px var(--btn-color);
     border-radius: .25rem;
     color: white;
-    transition: 0.25s ease;
+    transition: 0.4s ease;
 }
 
-.btn:hover {
+a.btn:hover, big:hover {
     background: var(--btn-color);
+    color: white;
+}
+.big {
+    display: inline;
+    padding: 15px 15px;
+    font-weight: 550;
 }
 
-img {
+.project-pic {
     width: 400px;
     aspect-ratio: 16 / 9;
+
     border-radius: 1rem;
+}
+
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.reveal {
+    transition: all 2s ease;
+    opacity: 0;
+}
+
+.on-view {
+    opacity: 1;
 }

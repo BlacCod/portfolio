@@ -7,72 +7,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
     <header>
-        <div class="logo">Header Logo</div>
+        <div class="logo"><a href="#">Huy Vu</a></div>
         <div class="nav-links">
             <nav>
                 <ul>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#" data-section="hero" class="active">Home</a></li>
+                    <li><a data-section="skills" href="#skills">Skills</a></li>
+                    <li><a data-section="projects" href="#projects">Projects</a></li>
+                    <li><a href="" class="btn big">Resume</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="hero">
-        <p class="about-small-text">My name is</p>
-        <p class="about-name">Placeholder</p>
-        <p class="about-desc-text">This website has some subtext that goes here under the main title. It's a smaller
-            font and the color is lower contrast</p>
-    </section>
-    <nav class="social">
-        <ul>
-            <li>Social Stuff: Lorem, ipsum dolor.</li>
-            <li>Amet, praesentium debitis!</li>
-            <li>Soluta, vel rem!</li>
+    <section id="hero" class="">
+        <p class="about-small-text">Hi. My name is</p>
+        <p class="about-name" style="font-size: 4rem">Vu Huy Nguyen</p>
+        <p class="about-desc-text">I'm a self-taught web developer</p>
+        <p class="email">Contact me at: <a href="mailto:vuhuynguyen4@gmail.com">vuhuynguyen4@gmail.com</a></p>
+        <ul class="social">
+            <li><a href="www.github.com"></a></li>
+            <li><a href="www.linkedin.com"></a></li>
+            <li></li>
         </ul>
-    </nav>
-    <section id="skills">
-        <h2>Skills</h2>
-        <h3>Knowledgeable</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, molestiae!</p>
-        <h3>Also has experience with</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, eius.</p>
     </section>
-    <section id="projects">
+    <section id="skills" class="reveal">
+        <h2>Skills</h2>
+        <div class="main-skills">
+                <img src="icons/html.png" alt="HTML" class="skill-icon">
+                <img src="icons/css.png" alt="CSS" class="skill-icon">
+                <img src="icons/js.png" alt="JavaScript" class="skill-icon">
+                <img src="icons/react.png" alt="ReactJs" class="skill-icon">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>ReactJs</span>
+        </div>
+        <h3>Also has experience with</h3>
+        <ul class="secondary-skills">
+            <li>Git</li>
+            <li>TailwindCSS</li>
+            <li>SQL</li>
+            <li>NodeJS</li>
+        </ul>
+    </section>
+    <section id="projects" class="reveal">
         <h2>Projects</h2>
-        <div class="project">
+        <div class="project reveal">
             <img src="placeholder-pics.jpg" alt="" class="project-pic">
             <div class="project-right">
-                <h3>Landing Page 1</h3>
-                <p class="project-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, corrupti.</p>
-                <p class="tech-list">Lorem, ipsum dolor.</p>
-                <a href="" class="btn">Code on GitHub</a><a href="" class="btn">Live project demo</a>
+                <a href="">
+                    <h3 class="project-title">Landing Page 1</h3>
+                </a>
+                <p class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, modi.</p>
+                <ul class="tech-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+                <span><a href="" class="btn">Code on GitHub</a><a href="" class="btn">Live Demo</a></span>
             </div>
         </div>
-        <div class="project">
+        <div class="project reveal">
             <img src="placeholder-pics.jpg" alt="" class="project-pic">
             <div class="project-right">
-                <h3>Landing Page 2</h3>
-                <p class="project-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, asperiores.</p>
+                <a href="">
+                    <h3 class="project-title">Landing Page 2</h3>
+                </a>
+                <p class="project-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium,
+                    asperiores.</p>
                 <p class="tech-list">Lorem, ipsum dolor.</p>
-                <a href="" class="btn">Code on GitHub</a><a href="" class="btn">Live project demo</a>
+                <span><a href="" class="btn">Code on GitHub</a><a href="" class="btn">Live Demo</a></span>
             </div>
         </div>
-        <div class="project">
+        <div class="project reveal">
             <img src="placeholder-pics.jpg" alt="" class="project-pic">
             <div class="project-right">
-                <h3> Landing Page 3</h3>
+                <a href="">
+                    <h3 class="project-title">Landing Page 3</h3>
+                </a>
                 <p class="project-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, nam?</p>
                 <p class="tech-list">Lorem, ipsum dolor.</p>
-                <a href="" class="btn">Code on GitHub</a><a href="" class="btn">Live project demo</a>
+                <span><a href="" class="btn">Code on GitHub</a><a href="" class="btn">Live Demo</a></span>
             </div>
-        </section>
+    </section>
     </div>
-    <div class="footer">Made with ❤ by <a href="https://github.com">HuyVu</a></div>
+    <div class="footer">Icons source: <a href="https://flaticon.com">FlatIcon</a></div>
 </body>
 
 </html>
