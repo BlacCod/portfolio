@@ -9,7 +9,7 @@ const observer = new IntersectionObserver((entries) => {
             if (entry.isIntersecting) observer.unobserve(entry.target)
         }
     })
-}, {threshold: 0.5})
+}, {threshold: 0.3})
 
 toReveal.forEach(element => {
     observer.observe(element)
