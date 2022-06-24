@@ -239,8 +239,16 @@ a.btn:hover, big:hover {
     aspect-ratio: 16 / 9;
 
     border-radius: 1rem;
+    box-shadow:
+  2.1px 2.4px 2.5px #ffffff14,
+  6.9px 8px 8.5px #ffffff19;
+
+  transition: all 0.5s ease;
 }
 
+.project-pic:hover {
+    transform: scale(1.2);
+}
 
 .footer {
     padding: 20px;

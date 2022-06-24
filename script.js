@@ -29,13 +29,10 @@ window.addEventListener("scroll", () => {
     a_All.forEach((a) => {
         a.classList.remove("active")
         if (a.dataset.section !== undefined) {
-            // li.dataset.section = li.dataset.section.replace(" active", "");
             if (a.dataset.section.includes(currentSection)) {
             a.classList.add("active")
             }
         }
-        console.log(currentSection)
-        console.log(a.dataset.section)
     })
 })
 
