@@ -178,14 +178,15 @@ h2::after {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 30px 100px 30px 200px;
+    margin: 30px 100px 30px 150px;
+    gap: 100px;
 }
 
 .project-right {
-    margin-left: 200px;
+    /* margin-left: 200px; */
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 15px;
 }
 
 .project-desc {
@@ -243,7 +244,7 @@ a.btn:hover, big:hover {
   2.1px 2.4px 2.5px #ffffff14,
   6.9px 8px 8.5px #ffffff19;
 
-  transition: all 0.5s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .project-pic:hover {
@@ -262,4 +263,23 @@ a.btn:hover, big:hover {
 
 .on-view {
     opacity: 1;
+}
+
+
+@media all and (max-width: 1250px) {
+    .project {
+        margin: 30px 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .project {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project-right {
+        align-items: center;
+        text-align: center;
+    }
 }
