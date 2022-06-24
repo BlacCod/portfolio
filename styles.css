@@ -325,4 +325,12 @@ a.btn:hover, big:hover {
     #hero {
         padding-left: 30px;
     }
+
+    .btn {
+        margin-right: 0;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
 }

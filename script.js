@@ -9,7 +9,7 @@ const observer = new IntersectionObserver((entries) => {
             if (entry.isIntersecting) observer.unobserve(entry.target)
         }
     })
-}, {threshold: 0.3})
+}, {threshold: 0.1})
 
 toReveal.forEach(element => {
     observer.observe(element)
@@ -18,7 +18,6 @@ window.addEventListener("scroll", () => {
     let currentSection = ""
     sections.forEach((section) => {
         const sectionTopDist = section.offsetTop;
-        console.log(sectionTopDist)
         const sectionHeight = section.clientHeight;
         
         if (scrollY >= sectionTopDist - sectionHeight / sections.length) {
