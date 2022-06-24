@@ -23,6 +23,7 @@ html {
     background-color: var(--navy);
     /* this is for smooth scrolling effect */
     scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
 }
 
 * {
@@ -43,7 +44,7 @@ section {
     position: relative;
 }
 
-/* This is to offset the fixed header height when jumping using anchor tags */
+/* This is to offset the fixed header height when jumping using anchor tags
 section::before {
     content: "";
     display: block;
@@ -51,7 +52,7 @@ section::before {
     margin-top: calc(var(--header-height) * -1);
     visibility: hidden;
     pointer-events: none;
-}
+} */
 
 
 #hero {
@@ -173,12 +174,17 @@ h2::after {
     margin: 20px;
 }
 
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
+}
 .project {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 30px 100px 30px 150px;
+    margin: 0 100px 0 150px;
     gap: 100px;
 }
 
